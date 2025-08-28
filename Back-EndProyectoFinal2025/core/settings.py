@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-load_dotenv(os.path.join(BASE_DIR.parent, '.env'))
+load_dotenv()
 
 # ============================
 # CONFIGURACIÓN BÁSICA
