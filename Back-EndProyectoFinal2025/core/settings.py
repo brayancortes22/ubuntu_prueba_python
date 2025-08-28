@@ -93,7 +93,7 @@ if DATABASE_ENGINE == 'postgresql':
             'NAME': os.getenv('POSTGRES_DB', 'dbautogestion-P'),
             'USER': os.getenv('POSTGRES_USER', 'postgres'),
             'PASSWORD': os.getenv('POSTGRES_PASSWORD', '123456'),
-            'HOST': os.getenv('POSTGRES_HOST', 'postgres-db'),
+            'HOST': os.getenv('POSTGRES_HOST', '192.168.1.8'),
             'PORT': os.getenv('POSTGRES_PORT', '5432'),
         }
     }
@@ -102,9 +102,9 @@ elif DATABASE_ENGINE == 'mysql':
         'default': {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': os.getenv('MYSQL_DATABASE', 'dbautogestion-M'),
-            'USER': os.getenv('MYSQL_USER', 'root'),
-            'PASSWORD': os.getenv('MYSQL_PASSWORD', '123456'),
-            'HOST': os.getenv('MYSQL_HOST', 'mysql-db'),
+            'USER': 'root',
+            'PASSWORD': os.getenv('MYSQL_ROOT_PASSWORD', '123456'),
+            'HOST': os.getenv('MYSQL_HOST', '192.168.1.8'),
             'PORT': os.getenv('MYSQL_PORT', '3306'),
             'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"},
         }
@@ -116,7 +116,7 @@ elif DATABASE_ENGINE == 'sqlserver':
             'NAME': os.getenv('MSSQL_DATABASE', 'dbautogestion-S'),
             'USER': os.getenv('MSSQL_USER', 'sa'),
             'PASSWORD': os.getenv('MSSQL_PASSWORD', 'Abc123$%'),
-            'HOST': os.getenv('MSSQL_HOST', 'mssql-db'),
+            'HOST': os.getenv('MSSQL_HOST', '192.168.1.8'),
             'PORT': os.getenv('MSSQL_PORT', '1433'),
             'OPTIONS': {
                 'driver': 'ODBC Driver 18 for SQL Server',
